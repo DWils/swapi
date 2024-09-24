@@ -1,0 +1,18 @@
+sprint:
+  application:
+    name: swapi
+  datasource:
+    url: jdbc:postgresql://localhost:5432/swapi_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8080
