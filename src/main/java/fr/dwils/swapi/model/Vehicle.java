@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED) // Choix de la stratégie d'héritage
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,9 +28,9 @@ public class Vehicle {
     private String passengers;
     private String cargoCapacity;
     private String consumables;
-    private String vehicleClass;
+    private String vehiculeClass;
 
     @ManyToMany(mappedBy = "vehicles")
     private List<Character> pilots;
-
 }
+
