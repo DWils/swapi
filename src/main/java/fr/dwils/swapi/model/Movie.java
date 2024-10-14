@@ -1,11 +1,13 @@
 package fr.dwils.swapi.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.util.List;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Movie {
     private Long id;
     private String title;
@@ -30,16 +32,8 @@ public class Movie {
     @JsonProperty("vote_count")
     private Integer voteCount;
 
-    @JsonProperty("genre_ids")
-    private List<Integer> genreIds;
-
     @JsonProperty("imdb_id")
     private String imdbId;
-
-    private Boolean adult;
-
-    @JsonProperty("original_language")
-    private String originalLanguage;
 
     private Double popularity;
 }

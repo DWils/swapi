@@ -1,10 +1,10 @@
 package fr.dwils.swapi.model;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.List;
 import java.util.UUID;
 
@@ -50,4 +50,9 @@ public class Character {
             joinColumns = @JoinColumn(name = "person_id"),
             inverseJoinColumns = @JoinColumn(name = "vehicle_id"))
     private List<Vehicle> vehicles;
+
+    @ElementCollection
+    private List<String> movieTitles;
+
+
 }

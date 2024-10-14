@@ -2,6 +2,7 @@ package fr.dwils.swapi.dto.response;
 
 import lombok.Data;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -16,4 +17,5 @@ public class CharacterResponse {
     private String birthYear;
     private String gender;
     private String homeworldName;  // Remplacer la relation par un nom simple
+    private List<MovieResponse> movies;
 }
